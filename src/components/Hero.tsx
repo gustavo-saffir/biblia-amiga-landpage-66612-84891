@@ -56,12 +56,12 @@ const Hero = () => {
           </div>
 
           {/* Image */}
-          <div className="relative">
+          <div className="relative mt-8 md:mt-0">
             <div className="absolute inset-0 bg-gradient-to-br from-secondary/30 to-accent/30 rounded-3xl blur-3xl"></div>
             <img 
               src={bibleHero} 
               alt="Bíblia para Colorir - Livro de atividades cristãs para crianças"
-              className="relative w-full max-w-lg mx-auto rounded-3xl shadow-2xl hover-lift card-elevated"
+              className="relative w-full max-w-md mx-auto rounded-2xl shadow-2xl hover-lift card-elevated"
             />
           </div>
         </div>
