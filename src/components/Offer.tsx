@@ -1,10 +1,29 @@
 import { Button } from "@/components/ui/button";
 import { Check, Gift, Clock } from "lucide-react";
-import mockupMobile from "@/assets/mockup-mobile.png";
-import mockupEbook from "@/assets/mockup-ebook.png";
-import mockupPages from "@/assets/mockup-pages.png";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import bookCover1 from "@/assets/book-cover-1.png";
+import bookCover2 from "@/assets/book-cover-2.png";
+import bookCover3 from "@/assets/book-cover-3.png";
+import bookCover4 from "@/assets/book-cover-4.png";
+import bookCover5 from "@/assets/book-cover-5.png";
+import bookCover6 from "@/assets/book-cover-6.png";
+import bookCover7 from "@/assets/book-cover-7.png";
+import bookCover8 from "@/assets/book-cover-8.png";
+import bookCover9 from "@/assets/book-cover-9.png";
 
 const Offer = () => {
+  const bookCovers = [
+    { id: 1, image: bookCover1, title: "Livro de Colorir 1" },
+    { id: 2, image: bookCover2, title: "Livro de Colorir 2" },
+    { id: 3, image: bookCover3, title: "Livro de Colorir 3" },
+    { id: 4, image: bookCover4, title: "Livro de Colorir 4" },
+    { id: 5, image: bookCover5, title: "Livro de Colorir 5" },
+    { id: 6, image: bookCover6, title: "Livro de Colorir 6" },
+    { id: 7, image: bookCover7, title: "Livro de Colorir 7" },
+    { id: 8, image: bookCover8, title: "Livro de Colorir 8" },
+    { id: 9, image: bookCover9, title: "Livro de Colorir 9" },
+  ];
+
   return (
     <section id="oferta" className="py-20 px-4 bg-card">
       <div className="container mx-auto max-w-4xl">
@@ -19,28 +38,54 @@ const Offer = () => {
           </div>
         </div>
 
-        {/* Mockup Images */}
-        <div className="mb-12 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-          <div className="hover-lift">
-            <img 
-              src={mockupMobile} 
-              alt="Ebook no celular - Geração Pequenos Heróis da Fé" 
-              className="w-full h-auto rounded-2xl shadow-2xl"
-            />
+        {/* Book Covers Carousel */}
+        <div className="mb-12 relative">
+          <div className="text-center mb-6">
+            <h3 className="text-2xl sm:text-3xl font-fredoka text-foreground mb-2">
+              📚 Conheça os 9 Livros Incríveis
+            </h3>
+            <p className="text-muted-foreground">
+              Deslize para ver todas as capas dos livros para colorir
+            </p>
           </div>
-          <div className="hover-lift">
-            <img 
-              src={mockupEbook} 
-              alt="Capa do ebook - Bíblia em Desenho" 
-              className="w-full h-auto rounded-2xl shadow-2xl"
-            />
-          </div>
-          <div className="hover-lift">
-            <img 
-              src={mockupPages} 
-              alt="Páginas para colorir do ebook" 
-              className="w-full h-auto rounded-2xl shadow-2xl"
-            />
+          
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full max-w-6xl mx-auto"
+          >
+            <CarouselContent className="-ml-2 md:-ml-4">
+              {bookCovers.map((book) => (
+                <CarouselItem key={book.id} className="pl-2 md:pl-4 basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4">
+                  <div className="group relative p-2">
+                    <div className="relative overflow-hidden rounded-2xl shadow-2xl hover-lift transition-smooth">
+                      <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-smooth z-10" />
+                      <img
+                        src={book.image}
+                        alt={`${book.title} - Livro para Colorir da Bíblia`}
+                        className="w-full h-auto transform group-hover:scale-105 transition-smooth"
+                      />
+                      <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-smooth z-20">
+                        <p className="text-white font-fredoka text-center text-sm">
+                          {book.title}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="hidden md:flex -left-4 lg:-left-12 bg-primary/90 hover:bg-primary text-white border-none hover:scale-110 transition-smooth" />
+            <CarouselNext className="hidden md:flex -right-4 lg:-right-12 bg-primary/90 hover:bg-primary text-white border-none hover:scale-110 transition-smooth" />
+          </Carousel>
+          
+          {/* Mobile swipe hint */}
+          <div className="md:hidden text-center mt-4">
+            <p className="text-sm text-muted-foreground animate-pulse">
+              👆 Deslize para ver mais livros
+            </p>
           </div>
         </div>
 
