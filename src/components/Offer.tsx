@@ -10,6 +10,14 @@ import bookCover6 from "@/assets/book-cover-6.png";
 import bookCover7 from "@/assets/book-cover-7.png";
 import bookCover8 from "@/assets/book-cover-8.png";
 import bookCover9 from "@/assets/book-cover-9.png";
+import bookCover10 from "@/assets/book-cover-10.png";
+import bookCover11 from "@/assets/book-cover-11.png";
+import bookCover12 from "@/assets/book-cover-12.png";
+import bookCover13 from "@/assets/book-cover-13.png";
+import bookCover14 from "@/assets/book-cover-14.png";
+import bookCover15 from "@/assets/book-cover-15.png";
+import bookCover16 from "@/assets/book-cover-16.png";
+import bookCover17 from "@/assets/book-cover-17.png";
 
 const Offer = () => {
   const bookCovers = [
@@ -22,6 +30,14 @@ const Offer = () => {
     { id: 7, image: bookCover7, title: "Livro de Colorir 7" },
     { id: 8, image: bookCover8, title: "Livro de Colorir 8" },
     { id: 9, image: bookCover9, title: "Livro de Colorir 9" },
+    { id: 10, image: bookCover10, title: "Livro de Colorir 10" },
+    { id: 11, image: bookCover11, title: "Livro de Colorir 11" },
+    { id: 12, image: bookCover12, title: "Livro de Colorir 12" },
+    { id: 13, image: bookCover13, title: "Livro de Colorir 13" },
+    { id: 14, image: bookCover14, title: "Livro de Colorir 14" },
+    { id: 15, image: bookCover15, title: "Livro de Colorir 15" },
+    { id: 16, image: bookCover16, title: "Livro de Colorir 16" },
+    { id: 17, image: bookCover17, title: "Bíblia em Desenho" },
   ];
 
   return (
@@ -42,10 +58,10 @@ const Offer = () => {
         <div className="mb-12 relative">
           <div className="text-center mb-6">
             <h3 className="text-2xl sm:text-3xl font-fredoka text-foreground mb-2">
-              📚 Conheça os 9 Livros Incríveis
+              📚 Mais de 25 Livros + A Bíblia em Desenho
             </h3>
             <p className="text-muted-foreground">
-              Deslize para ver todas as capas dos livros para colorir
+              Deslize para ver todas as capas incríveis dos livros para colorir
             </p>
           </div>
           
