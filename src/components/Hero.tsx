@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Sparkles, ArrowDown } from "lucide-react";
-import bibleHero from "@/assets/bible-hero-new.jpg";
+import bibleHero from "@/assets/capa_celular.png";
 
 const Hero = () => {
   const scrollToOffer = () => {
