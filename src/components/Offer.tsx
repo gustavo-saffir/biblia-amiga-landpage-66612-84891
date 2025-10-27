@@ -65,16 +65,31 @@ const Offer = () => {
           <div className="space-y-4 mb-8">
             <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-6">O que está incluso:</h3>
             
-            {/* Regular Items */}
-            <div className="space-y-3">
-              <div className="bg-background/50 p-3 sm:p-4 rounded-xl">
-                <p className="text-sm sm:text-base md:text-lg text-foreground font-semibold mb-2">📚 Bíblia Para Colorir Digital</p>
-                <ul className="ml-6 space-y-1">
-                  <li className="text-sm sm:text-base text-muted-foreground">• Os 10 mandamentos</li>
-                  <li className="text-sm sm:text-base text-muted-foreground">• Genesis - o Começo</li>
-                  <li className="text-sm sm:text-base text-muted-foreground">• Historinhas do Novo Testamento</li>
+            {/* Featured Main Offer */}
+            <div className="highlight-gradient p-4 sm:p-6 rounded-2xl border-2 border-primary/30 card-elevated">
+              <div className="space-y-3">
+                <p className="text-lg sm:text-xl md:text-2xl text-accent-foreground font-bold mb-3">
+                  🎨 21 LIVROS PARA COLORIR DA BÍBLIA
+                </p>
+                <div className="bg-white/20 backdrop-blur-sm p-3 sm:p-4 rounded-xl">
+                  <p className="text-base sm:text-lg md:text-xl text-accent-foreground font-bold mb-2">
+                    ⭐ MAIS DE 1.000 DESENHOS ESTILO BOBBIE GOODS
+                  </p>
+                  <p className="text-sm sm:text-base text-accent-foreground/90">
+                    Ilustrações encantadoras e pedagógicas que seus filhos vão adorar!
+                  </p>
+                </div>
+                <ul className="ml-4 space-y-2">
+                  <li className="text-sm sm:text-base text-accent-foreground">✨ Os 10 Mandamentos</li>
+                  <li className="text-sm sm:text-base text-accent-foreground">✨ Gênesis - O Começo de Tudo</li>
+                  <li className="text-sm sm:text-base text-accent-foreground">✨ Histórias do Novo Testamento</li>
+                  <li className="text-sm sm:text-base text-accent-foreground">✨ E muito mais!</li>
                 </ul>
               </div>
+            </div>
+            
+            {/* Regular Items */}
+            <div className="space-y-3">
               
               <div className="flex items-start gap-3 bg-background/50 p-3 sm:p-4 rounded-xl">
                 <Check className="w-5 h-5 sm:w-6 sm:h-6 text-primary flex-shrink-0 mt-1" />
